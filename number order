@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+int a[10];
+int i;
+
+
+void get()
+{
+  for(i = 0; i < 10; i++)
+   {
+       
+       scanf("%d", & a[i]);
+       
+   }
+}
+
+
+void put ()
+{
+    for (i = 0; i < 10; i++)
+    {
+        
+       printf("%d  ", a[i]);
+        
+    }
+}
+
+
+
+
+void trans()
+{
+    int b;
+    int m;
+    
+    for (b = 1; b < 10; b ++)
+    {
+        for (i = 0; i < (10 - b); i++)
+        {
+            if (a[i] > a[i+1])
+            {
+                m = a[i+1];
+                a[i+1] = a[i];
+                a[i] = m;
+            }
+        
+            
+        }    
+            
+        
+        
+    }
+    
+    
+}
+
+
+
+
+int main(void) { 
+
+
+   get();
+   trans();
+   put();
+   
+   
+   
+   
+   
+
+
+
+
+
+	return 0;
+}
